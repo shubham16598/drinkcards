@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<input
+  type="text"
+  id="fname"
+  [ngModel]="query"
+  (ngModelChange)="onNameChange($event)"
+  placeholder="Search By Name or Categpry"
+/>
+<div class="drinks">
+  <div class="card" *ngFor="let product of products">
+    <img src="{{product.strDrinkThumb}}" alt="Avatar" style="width: 100%;" />
+    <div class="container">
+      <h4><b>Drink Name: {{product.strDrink}}</b></h4>
+      <p>Categpry: {{product.strCategory}}</p>
+    </div>
+  </div>
+</div>
